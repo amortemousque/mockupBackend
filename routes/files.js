@@ -7,12 +7,12 @@ var fs = require('fs');
 
 
 var server = new Server('localhost', 27017, {auto_reconnect: true});
-db = new Db('files', server);
+db = new Db('mockup', server);
 
 db.open(function(err, db) {
     if(!err) {
         console.log("Connected to 'files' database");
-        db.collection('layers', {strict:true}, function(err, collection) {
+        db.collection('files', {strict:true}, function(err, collection) {
             if (err) {
                 console.log("The 'files' collection doesn't exist. Creating it with sample data...");
                 //populateDB();

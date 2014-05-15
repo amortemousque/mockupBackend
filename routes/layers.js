@@ -6,7 +6,7 @@ var ObjectID = require('mongodb').ObjectID;
 
 
 var server = new Server('localhost', 27017, {auto_reconnect: true});
-db = new Db('layers', server);
+db = new Db('mockup', server);
 
 db.open(function(err, db) {
     if(!err) {
@@ -28,18 +28,23 @@ exports.findAll = function(req, res) {
     });
 };
 
-exports.addLayers = function(req, res) {
+exports.saveLayers = function(req, res) {
     var layers = req.body;
-    console.log('Adding layers: ' + JSON.stringify(layers));
     db.collection('layers', function(err, collection) {
-        collection.insert(layers, {safe:true}, function(err, results) {
-            if (err) {
-                res.send({'error':'An error has occurred'});
-            } else {
-                console.log('Success: ' + JSON.stringify(results));
-                res.send(results);
-            }
-        });
+        console.log('Adding layers: ' + JSON.stringify(layers));
+        var length = layers.length;
+        for(var i = 0; i < length; i++) {
+            console.log("layer", layers[i]);
+            collection.save(layers[i], function(err, result, update) {
+                // if (err) {
+                //     res.send({'error':'An error has occurred'});
+                // } else {
+                //     console.log('Success: ' + JSON.stringify(results));
+                //     res.send(results);
+                // }
+            });
+            res.send(layers);
+        }
     });
 };
 
@@ -54,3 +59,20 @@ exports.findByMockupId = function(req, res) {
         });
     });
 };
+
+exports.deleteByMockupId = function(req, res) {
+    var mockupId = req.params.id;
+    console.log('Deleting mockup: ' + mockupId);
+    db.collection('layers', function(err, collection) {
+        collection.remove({ mockup_id: mockupId}, {safe:true}, function(err, result) {
+            if (err) {
+                res.send({'error':'An error has occurred - ' + err});
+            } else {
+                console.log('' + result + ' document(s) deleted');
+                res.send(req.body);
+            }
+        });
+    });
+};
+
+

@@ -6,7 +6,7 @@ var ObjectID = require('mongodb').ObjectID;
 
 
 var server = new Server('localhost', 27017, {auto_reconnect: true});
-db = new Db('mockups', server);
+db = new Db('mockup', server);
 
 db.open(function(err, db) {
     if(!err) {
@@ -39,16 +39,15 @@ exports.findById = function(req, res) {
     });
 };
 
-exports.addMockup = function(req, res) {
+exports.saveMockup = function(req, res) {
     var mockup = req.body;
     console.log('Adding mockups: ' + JSON.stringify(mockup));
     db.collection('mockups', function(err, collection) {
-        collection.insert(mockup, {safe:true}, function(err, result) {
-            if (err) {
-                res.send({'error':'An error has occurred'});
-            } else {
-                console.log('Success: ' + JSON.stringify(result[0]));
-                res.send(result[0]);
+        collection.save(mockup, {safe:true}, function(err, result, update) {
+            if(update == undefined) { //update
+                res.send(result); 
+            } else { //insert
+                res.send(mockup);
             }
         });
     });
@@ -71,13 +70,12 @@ exports.updateMockup = function(req, res) {
         });
     });
 }
- 
 
-exports.deleteMockup = function(id, callback) {
-    var id = req.params.id;
-    console.log('Deleting mockup: ' + id);
+exports.deleteMockup = function(req, res) {
+    var idMockup = req.params.id;
+    console.log('Deleting mockup: ' + idMockup);
     db.collection('mockups', function(err, collection) {
-        collection.remove({'_id':new BSON.ObjectID(id)}, {safe:true}, function(err, result) {
+        collection.remove({'_id': idMockup}, {safe:true}, function(err, result) {
             if (err) {
                 res.send({'error':'An error has occurred - ' + err});
             } else {

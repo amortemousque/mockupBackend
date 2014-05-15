@@ -32,13 +32,16 @@ app.configure(function(){
 
 app.get('/mockups', mockups.findAll);
 app.get('/mockups/:id', mockups.findById);
-app.post('/mockups', mockups.addMockup);
+app.post('/mockups', mockups.saveMockup);
 app.put('/mockups/:id', mockups.updateMockup);
 app.delete('/mockups/:id', mockups.deleteMockup);
 
-app.get('/layers', layers.findAll);
+
 app.get('/mockupLayers/:id', layers.findByMockupId);
-app.post('/layers', layers.addLayers);
+app.delete('/mockupLayers/:id', layers.deleteByMockupId);
+
+app.get('/layers', layers.findAll);
+app.post('/layers', layers.saveLayers);
 
 app.get('/files/:id', files.findById);
 app.post('/files', files.addFiles);
