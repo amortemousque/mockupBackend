@@ -75,12 +75,13 @@ exports.deleteMockup = function(req, res) {
     var idMockup = req.params.id;
     console.log('Deleting mockup: ' + idMockup);
     db.collection('mockups', function(err, collection) {
-        collection.remove({'_id': idMockup}, {safe:true}, function(err, result) {
+        console.log('Deleting mockup: ' + new ObjectID(idMockup));
+        collection.remove({'_id':new ObjectID(idMockup)}, {safe:true}, function(err, result) {
             if (err) {
                 res.send({'error':'An error has occurred - ' + err});
             } else {
                 console.log('' + result + ' document(s) deleted');
-                res.send(req.body);
+                res.send(idMockup);
             }
         });
     });

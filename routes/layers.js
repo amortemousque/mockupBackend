@@ -62,7 +62,7 @@ exports.findByMockupId = function(req, res) {
 
 exports.deleteByMockupId = function(req, res) {
     var mockupId = req.params.id;
-    console.log('Deleting mockup: ' + mockupId);
+    console.log('Deleting layers: ' + mockupId);
     db.collection('layers', function(err, collection) {
         collection.remove({ mockup_id: mockupId}, {safe:true}, function(err, result) {
             if (err) {
