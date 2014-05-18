@@ -2,9 +2,13 @@ var express = require('express'),
 	mockups = require('./routes/mockups'),
 	layers = require('./routes/layers'),
 	files = require('./routes/files'),
+	generator = require('./routes/generator'),
 	http = require('http'),
 	path = require('path'),
 	fs = require('fs');
+	js2xmlparser = require("js2xmlparser");
+	xslt = require('node_xslt');
+    phantom = require('node-phantom');
 
 
 var app = express();
@@ -45,6 +49,8 @@ app.post('/layers', layers.saveLayers);
 
 app.get('/files/:id', files.findById);
 app.post('/files', files.addFiles);
+
+app.get('/generator/:id', generator.getByMockupId);
 
 app.listen(3000);
 console.log('Listening on port 3000');

@@ -1,0 +1,2 @@
+npm install phantomjs // libe pour HTML to PDF
+npm install phantom // utiliser Phantome js avec express
