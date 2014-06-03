@@ -41,6 +41,9 @@ exports.findById = function(req, res) {
 
 exports.saveMockup = function(req, res) {
     var mockup = req.body;
+    if(mockup._id != undefined) {
+        mockup._id = new ObjectID(mockup._id);
+    }
     console.log('Adding mockups: ' + JSON.stringify(mockup));
     db.collection('mockups', function(err, collection) {
         collection.save(mockup, {safe:true}, function(err, result, update) {
@@ -53,23 +56,23 @@ exports.saveMockup = function(req, res) {
     });
 };
 
-exports.updateMockup = function(req, res) {
-    var id = req.params.id;
-    var mockup = req.body;
-    console.log('Updating mockup: ' + id);
-    console.log(JSON.stringify(mockup));
-    db.collection('mockups', function(err, collection) {
-        collection.update({'_id':new BSON.ObjectID(id)}, mockup, {safe:true}, function(err, result) {
-            if (err) {
-                console.log('Error updating mockup: ' + err);
-                res.send({'error':'An error has occurred'});
-            } else {
-                console.log('' + result + ' document(s) updated');
-                res.send(mockup);
-            }
-        });
-    });
-}
+// exports.updateMockup = function(req, res) {
+//     var id = req.params.id;
+//     var mockup = req.body;
+//     console.log('Updating mockup: ' + id);
+//     console.log(JSON.stringify(mockup));
+//     db.collection('mockups', function(err, collection) {
+//         collection.update({'_id':new BSON.ObjectID(id)}, mockup, {safe:true}, function(err, result) {
+//             if (err) {
+//                 console.log('Error updating mockup: ' + err);
+//                 res.send({'error':'An error has occurred'});
+//             } else {
+//                 console.log('' + result + ' document(s) updated');
+//                 res.send(mockup);
+//             }
+//         });
+//     });
+// }
 
 exports.deleteMockup = function(req, res) {
     var idMockup = req.params.id;

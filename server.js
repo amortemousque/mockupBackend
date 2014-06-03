@@ -2,6 +2,7 @@ var express = require('express'),
 	mockups = require('./routes/mockups'),
 	layers = require('./routes/layers'),
 	files = require('./routes/files'),
+
 	generator = require('./routes/generator'),
 	http = require('http'),
 	path = require('path'),
@@ -37,7 +38,7 @@ app.configure(function(){
 app.get('/mockups', mockups.findAll);
 app.get('/mockups/:id', mockups.findById);
 app.post('/mockups', mockups.saveMockup);
-app.put('/mockups/:id', mockups.updateMockup);
+//app.put('/mockups/:id', mockups.updateMockup);
 app.delete('/mockups/:id', mockups.deleteMockup);
 
 
@@ -46,6 +47,7 @@ app.delete('/mockupLayers/:id', layers.deleteByMockupId);
 
 app.get('/layers', layers.findAll);
 app.post('/layers', layers.saveLayers);
+
 
 app.get('/files/:id', files.findById);
 app.post('/files', files.addFiles);
