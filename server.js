@@ -10,13 +10,14 @@ var express = require('express'),
 	js2xmlparser = require("js2xmlparser");
 	xslt = require('node_xslt');
     phantom = require('node-phantom');
+    gm = require('gm'); //https://github.com/aheckmann/gm
 
 
 var app = express();
 
 
 var allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', 'http://127.0.0.1:9000');
+    res.header('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type,x-requested-with');
     next();
@@ -47,7 +48,6 @@ app.delete('/mockupLayers/:id', layers.deleteByMockupId);
 
 app.get('/layers', layers.findAll);
 app.post('/layers', layers.saveLayers);
-
 
 app.get('/files/:id', files.findById);
 app.post('/files', files.addFiles);

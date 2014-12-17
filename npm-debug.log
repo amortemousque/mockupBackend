@@ -1,0 +1,557 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'lwip' ]
+2 info using npm@1.2.18
+3 info using node@v0.10.5
+4 verbose read json /Users/aymericmortemousque/Git/mockupBackend/package.json
+5 warn package.json mockup-backend@0.0.1 No README.md file found!
+6 verbose read json /Users/aymericmortemousque/Git/mockupBackend/node_modules/connect-multiparty/package.json
+7 verbose read json /Users/aymericmortemousque/Git/mockupBackend/node_modules/ejdb/package.json
+8 verbose read json /Users/aymericmortemousque/Git/mockupBackend/node_modules/express/package.json
+9 verbose read json /Users/aymericmortemousque/Git/mockupBackend/node_modules/gm/package.json
+10 verbose read json /Users/aymericmortemousque/Git/mockupBackend/node_modules/mongodb/package.json
+11 verbose read json /Users/aymericmortemousque/Git/mockupBackend/node_modules/node-phantom/package.json
+12 verbose read json /Users/aymericmortemousque/Git/mockupBackend/node_modules/node_xslt/package.json
+13 verbose read json /Users/aymericmortemousque/Git/mockupBackend/node_modules/phantom/package.json
+14 verbose read json /Users/aymericmortemousque/Git/mockupBackend/node_modules/phantomjs/package.json
+15 verbose from cache /Users/aymericmortemousque/Git/mockupBackend/package.json
+16 verbose readDependencies using package.json deps
+17 verbose cache add [ 'lwip', null ]
+18 verbose cache add name=undefined spec="lwip" args=["lwip",null]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: 'lwip',
+19 verbose parsed url   path: 'lwip',
+19 verbose parsed url   href: 'lwip' }
+20 silly lockFile 1a3842c0-lwip lwip
+21 verbose lock lwip /Users/aymericmortemousque/.npm/1a3842c0-lwip.lock
+22 silly lockFile 1a3842c0-lwip lwip
+23 silly lockFile 1a3842c0-lwip lwip
+24 verbose addNamed [ 'lwip', '' ]
+25 verbose addNamed [ null, '' ]
+26 silly lockFile 6eb93e85-lwip lwip@
+27 verbose lock lwip@ /Users/aymericmortemousque/.npm/6eb93e85-lwip.lock
+28 silly addNameRange { name: 'lwip', range: '', hasData: false }
+29 verbose url raw lwip
+30 verbose url resolving [ 'https://registry.npmjs.org/', './lwip' ]
+31 verbose url resolved https://registry.npmjs.org/lwip
+32 info trying registry request attempt 1 at 19:18:37
+33 verbose etag "DZ8G7AHJFUKN1GUSADXSFBAUB"
+34 http GET https://registry.npmjs.org/lwip
+35 http 304 https://registry.npmjs.org/lwip
+36 silly registry.get cb [ 304,
+36 silly registry.get   { date: 'Wed, 22 Oct 2014 17:18:37 GMT',
+36 silly registry.get     server: 'Apache',
+36 silly registry.get     via: '1.1 varnish',
+36 silly registry.get     'last-modified': 'Wed, 22 Oct 2014 17:18:38 GMT',
+36 silly registry.get     'cache-control': 'max-age=60',
+36 silly registry.get     etag: '"DZ8G7AHJFUKN1GUSADXSFBAUB"',
+36 silly registry.get     age: '0',
+36 silly registry.get     'x-served-by': 'cache-lhr6331-LHR',
+36 silly registry.get     'x-cache': 'MISS',
+36 silly registry.get     'x-cache-hits': '0',
+36 silly registry.get     'x-timer': 'S1413998317.913716,VS0,VE485',
+36 silly registry.get     vary: 'Accept',
+36 silly registry.get     'content-length': '0',
+36 silly registry.get     'keep-alive': 'timeout=10, max=50',
+36 silly registry.get     connection: 'Keep-Alive' } ]
+37 verbose etag lwip from cache
+38 silly addNameRange number 2 { name: 'lwip', range: '', hasData: true }
+39 silly addNameRange versions [ 'lwip', [ '0.0.1', '0.0.2', '0.0.3', '0.0.4', '0.0.5' ] ]
+40 verbose addNamed [ 'lwip', '0.0.5' ]
+41 verbose addNamed [ '0.0.5', '0.0.5' ]
+42 silly lockFile f8e20cf0-lwip-0-0-5 lwip@0.0.5
+43 verbose lock lwip@0.0.5 /Users/aymericmortemousque/.npm/f8e20cf0-lwip-0-0-5.lock
+44 verbose read json /Users/aymericmortemousque/.npm/lwip/0.0.5/package/package.json
+45 silly lockFile f8e20cf0-lwip-0-0-5 lwip@0.0.5
+46 silly lockFile f8e20cf0-lwip-0-0-5 lwip@0.0.5
+47 silly lockFile 6eb93e85-lwip lwip@
+48 silly lockFile 6eb93e85-lwip lwip@
+49 silly resolved [ { name: 'lwip',
+49 silly resolved     version: '0.0.5',
+49 silly resolved     main: 'index.js',
+49 silly resolved     dependencies: { async: '^0.9.0', decree: '0.0.2', nan: '^1.3.0' },
+49 silly resolved     scripts:
+49 silly resolved      { install: 'node-gyp rebuild',
+49 silly resolved        test: './node_modules/.bin/mocha --opts tests/mocha.opts tests',
+49 silly resolved        coverage: './node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- --opts tests/mocha.opts tests',
+49 silly resolved        travis: './node_modules/.bin/istanbul cover --report lcovonly ./node_modules/.bin/_mocha -- --opts tests/mocha.opts --bail tests && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js' },
+49 silly resolved     gypfile: true,
+49 silly resolved     description: 'Comprehensive, fast, and simple image processing and manipulation',
+49 silly resolved     directories: { example: 'examples' },
+49 silly resolved     devDependencies:
+49 silly resolved      { coveralls: '^2.11.1',
+49 silly resolved        istanbul: '^0.3.2',
+49 silly resolved        mkdirp: '^0.5.0',
+49 silly resolved        mocha: '^1.20.1',
+49 silly resolved        'mocha-lcov-reporter': '0.0.1',
+49 silly resolved        should: '^4.0.4' },
+49 silly resolved     repository: { type: 'git', url: 'https://github.com/EyalAr/lwip.git' },
+49 silly resolved     keywords:
+49 silly resolved      [ 'image',
+49 silly resolved        'buffer',
+49 silly resolved        'manipulate',
+49 silly resolved        'process',
+49 silly resolved        'resize',
+49 silly resolved        'scale',
+49 silly resolved        'rotate',
+49 silly resolved        'jpeg',
+49 silly resolved        'jpg',
+49 silly resolved        'png',
+49 silly resolved        'crop',
+49 silly resolved        'blur',
+49 silly resolved        'sharpen',
+49 silly resolved        'batch',
+49 silly resolved        'flip',
+49 silly resolved        'mirror',
+49 silly resolved        'border',
+49 silly resolved        'padding',
+49 silly resolved        'hue',
+49 silly resolved        'saturation',
+49 silly resolved        'lightness',
+49 silly resolved        'alpha',
+49 silly resolved        'transparency',
+49 silly resolved        'fade',
+49 silly resolved        'opacity' ],
+49 silly resolved     author: { name: 'Eyal Arubas', email: 'eyalarubas@gmail.com' },
+49 silly resolved     license: 'MIT',
+49 silly resolved     bugs: { url: 'https://github.com/EyalAr/lwip/issues' },
+49 silly resolved     homepage: 'https://github.com/EyalAr/lwip',
+49 silly resolved     readme: '[![Version](http://img.shields.io/npm/v/lwip.svg)](https://www.npmjs.org/package/lwip)\n[![Build Status](https://api.travis-ci.org/EyalAr/lwip.svg?branch=master)](https://travis-ci.org/EyalAr/lwip)\n[![Coverage Status](https://img.shields.io/coveralls/EyalAr/lwip/master.svg)](https://coveralls.io/r/EyalAr/lwip)\n\n# Light-weight image processor for NodeJS\n\n0. [Overview](#overview)\n  0. [Installation](#installation)\n  0. [Usage](#usage)\n  0. [Supported formats](#supported-formats)\n  0. [Colors specification](#colors-specification)\n  0. [Note on transparent images](#note-on-transparent-images)\n0. [API](#api)\n  0. [Open an image from file or buffer](#open-an-image)\n  0. [Create a new blank image](#create-a-new-image)\n  0. [Image operations](#image-operations)\n    0. [Resize](#resize)\n    0. [Scale](#scale)\n    0. [Rotate](#rotate)\n    0. [Crop](#crop)\n    0. [Blur](#blur)\n    0. [Sharpen](#sharpen)\n    0. [Mirror](#mirror)\n    0. [Flip](#flip)\n    0. [Border](#border)\n    0. [Pad](#pad)\n    0. [Adjust saturation](#saturate)\n    0. Adjust lightness: [lighten](#lighten) / [darken](#darken)\n    0. [Adjust hue](#hue)\n    0. [Fade (adjust transparency)](#fade)\n    0. [Opacify](#opacify)\n    0. [Paste](#paste)\n  0. [Getters](#getters)\n    0. [Width](#width)\n    0. [Height](#height)\n    0. [Clone](#clone)\n    0. [Extract / Copy](#extract)\n    0. [Get as a Buffer](#get-as-a-buffer)\n      0. [JPEG](#jpeg)\n      0. [PNG](#png)\n    0. [Write to file](#write-to-file)\n  0. [Batch operations](#batch-operations)\n0. [Copyrights](#copyrights)\n\n## Overview\n\nThis module provides comprehensive, fast, and simple image processing and\nmanipulation capabilities.\n\n**There are no external runtime dependencies**, which means you don\'t have to\ninstall anything else on your system.\n\n**This module is in active development. [New features](https://github.com/EyalAr/lwip/issues?labels=feature+request&page=1&state=open) are being added.**\n\n[Read the background for the development of this module.](http://eyalarubas.com/image-processing-nodejs.html)\n\n### Installation\n\n`npm install lwip`\n\nOr, clone this repo and `cd lwip && npm install`.\n\nYou can run tests with `npm test`.\n\n### Usage\n\n**Typical workflow:**\n\n0. Open an image and get an image object.\n0. Manipulate it.\n0. Save to disk / Send image buffer over network / etc.\n\n**Example (batch operations):**\n\n```Javascript\n// obtain an image object:\nrequire(\'lwip\').open(\'image.jpg\', function(err, image){\n  \n  // check err...\n  // define a batch of manipulations and save to disk as JPEG:\n  image.batch()\n    .scale(0.75)          // scale to 75%\n    .rotate(45, \'white\')  // rotate 45degs clockwise (white fill)\n    .crop(200)            // crop a 200X200 square from center\n    .blur(5)              // Gaussian blur with SD=5\n    .writeFile(\'output.jpg\', function(err){\n      // check err...\n      // done.\n    });\n\n});\n```\n\n**Example (non-batch):**\n\n```Javascript\nvar lwip = require(\'lwip\');\n\n// obtain an image object:\nlwip.open(\'image.jpg\', function(err, image){\n  \n  // check err...\n  // manipulate image:\n  image.scale(0.5, function(err, image){\n\n    // check err...\n    // manipulate some more:\n    image.rotate(45, \'white\', function(err, image){\n\n      // check err...\n      // encode to jpeg and get a buffer object:\n      image.toBuffer(\'jpg\', function(err, buffer){\n\n        // check err...\n        // save buffer to disk / send over network / etc.\n\n      });\n\n    });\n\n  });\n\n});\n```\n\n### Supported formats\n\n**Decoding (reading):**\n\n- JPEG, 1 & 3 channels (grayscale & RGB).\n- PNG, 1 & 3 channels (grayscale & RGB) + alpha (transparency) channel.\n\n**Encoding (writing):**\n\n- JPEG, 3 channels (RGB).\n- PNG (lossless), 3 channels (RGB) or 4 channels (RGBA).\n\nOther formats may also be supported in the future, but are probably less urgent.\nCheck the issues to see [which formats are planned to be supported](https://github.com/EyalAr/lwip/issues?labels=format+request&page=1&state=open).\nOpen an issue if you need support for a format which is not already listed.\n\n### Colors specification\n\nIn LWIP colors are coded as RGBA values (red, green, blue and an alpha channel).\n\nColors are specified in one of three ways:\n\n- As a string. possible values:\n\n  ```Javascript\n  "black"    // {r: 0, g: 0, b: 0, a: 100}\n  "white"    // {r: 255, g: 255, b: 255, a: 100}\n  "gray"     // {r: 128, g: 128, b: 128, a: 100}\n  "red"      // {r: 255, g: 0, b: 0, a: 100}\n  "green"    // {r: 0, g: 255, b: 0, a: 100}\n  "blue"     // {r: 0, g: 0, b: 255, a: 100}\n  "yellow"   // {r: 255, g: 255, b: 0, a: 100}\n  "cyan"     // {r: 0, g: 255, b: 255, a: 100}\n  "magenta"  // {r: 255, g: 0, b: 255, a: 100} \n  ```\n\n- As an array `[R, G, B, A]` where `R`, `G` and `B` are integers between 0 and\n  255 and `A` is an integer between 0 and 100.\n- As an object `{r: R, g: G, b: B, a: A}` where `R`, `G` and `B` are integers\n  between 0 and 255 and `A` is an integer between 0 and 100.\n\n**Note**: The `A` value (alpha channel) is always optional and defaults to\n100 (completely opaque).\n\n### Note on transparent images\n\n0. Transparency is supported through an alpha channel which ranges between 0\n   and 100. 0 is completely transparent and 100 is completely opaque.\n0. Not all formats support transparency. If an image with an alpha channel is\n   encoded with a format which does not support transparency, the alpha channel\n   will be ignored (effectively setting it to 100% for all pixels).\n\n## API\n\nAll operations are done on an `image` object. An `image` object can be obtained\nby:\n\n0. Openning an existing image file or buffer with the [`open`](#open-an-image)\n   method.\n0. Creating a new image object with the [`create`](#create-a-new-image) method.\n0. Cloning an existing image object with the [`image.clone`](#clone) method.\n0. Extracting a sub-image from an existing image object with the\n   [`image.extract`](#extract) method.\n\n### Open an image\n\n`lwip.open(source, type, callback)`\n\n0. `source {String/Buffer}`: The path to the image on disk or an image buffer.\n0. `type {String}`: **Optional** type of the image. If omitted, the type will be\n   inferred from the file extension. If `source` is a buffer, `type` must be\n   specified.\n0. `callback {Function(err, image)}`\n\n#### Open file example\n\n```Javascript\nvar lwip = require(\'lwip\');\nlwip.open(\'path/to/image.jpg\', function(err, image){\n    // check \'err\'. use \'image\'.\n    // image.resize(...), etc.\n});\n```\n\n#### Open buffer example\n\n```Javascript\nvar fs = require(\'fs\'),\n    lwip = require(\'lwip\');\n\nfs.readFile(\'path/to/image.png\', function(err, buffer){\n  // check err\n  lwip.open(buffer, \'png\', function(err, image){\n      // check \'err\'. use \'image\'.\n      // image.resize(...), etc.\n  });\n});\n```\n\n### Create a new image\n\n`lwip.create(width, height, color, callback)`\n\n0. `width {Integer>0}`: The width of the new image.\n0. `height {Integer>0}`: The height of the new image.\n0. `color {String / Array / Object}`: **Optional** Color of the canvas. See\n   [colors specification](#colors-specification). Defaults to a transparent\n   canvas `{r:0, g:0, b:0, a:0}`.\n0. `callback {Function(err, image)}`\n\n**Example**:\n\n```Javascript\nvar lwip = require(\'lwip\');\n\nlwip.create(500, 500, \'yellow\', function(err, image){\n  // check err\n  // \'image\' is a 500X500 solid yellow canvas.\n});\n```\n\n### Image operations\n\n#### Resize\n\n`image.resize(width, height, inter, callback)`\n\n0. `width {Integer}`: Width in pixels.\n0. `height {Integer}`: **Optional** height in pixels. If omitted, `width` will\n   be used.\n0. `inter {String}`: **Optional** interpolation method. Defaults to `"lanczos"`.\n   Possible values:\n   - `"nearest-neighbor"`\n   - `"moving-average"`\n   - `"linear"`\n   - `"grid"`\n   - `"cubic"`\n   - `"lanczos"`\n0. `callback {Function(err, image)}`\n\n#### Scale\n\n`image.scale(wRatio, hRatio, inter, callback)`\n\n0. `wRatio {Float}`: Width scale ratio.\n0. `hRatio {Float}`: **Optional** height scale ratio. If omitted, `wRatio` will\n   be used.\n0. `inter {String}`: **Optional** interpolation method. Defaults to `"lanczos"`.\n   Possible values:\n   - `"nearest-neighbor"`\n   - `"moving-average"`\n   - `"linear"`\n   - `"grid"`\n   - `"cubic"`\n   - `"lanczos"`\n0. `callback {Function(err, image)}`\n\n#### Rotate\n\n`image.rotate(degs, color, callback)`\n\n0. `degs {Float}`: Clockwise rotation degrees.\n0. `color {String / Array / Object}`: **Optional** Color of the canvas. See\n   [colors specification](#colors-specification).\n0. `callback {Function(err, image)}`\n\n#### Crop\n\n#### Crop with rectangle coordinates\n\n`image.crop(left, top, right, bottom, callback)`\n\n0. `left, top, right, bottom {Integer}`: Coordinates of the crop rectangle.\n0. `callback {Function(err, image)}`\n\n#### Crop a rectangle from center\n\n`image.crop(width, height, callback)`\n\n0. `width, height {Integer}`: Width and height of the rectangle to crop from the\n   center of the image.\n0. `callback {Function(err, image)}`\n\n#### Blur\n\nGaussian blur.\n\n`image.blur(sigma, callback)`\n\n0. `sigma {Float>=0}`: Standard deviation of the Gaussian filter.\n0. `callback {Function(err, image)}`\n\n#### Sharpen\n\nInverse diffusion shapren.\n\n`image.sharpen(amplitude, callback)`\n\n0. `amplitude {Float}`: Sharpening amplitude.\n0. `callback {Function(err, image)}`\n\n#### Mirror\n\nMirror an image along the \'x\' axis, \'y\' axis or both.\n\n`image.mirror(axes, callback)`\n\n0. `axes {String}`: `\'x\'`, `\'y\'` or `\'xy\'`.\n0. `callback {Function(err, image)}`\n\n#### Flip\n\nAlias of [`mirror`](#mirror).\n\n#### Border\n\nAdd a colored border to the image.\n\n`image.border(width, color, callback)`\n\n0. `width {Integer}`: Border width in pixels.\n0. `color {String / Array / Object}`: **Optional** Color of the border. See\n   [colors specification](#colors-specification).\n0. `callback {Function(err, image)}`\n\n#### Pad\n\nPad image edges with colored pixels.\n\n`image.pad(left, top, right, bottom, color, callback)`\n\n0. `left, top, right, bottom {Integer}`: Number of pixels to add to each edge.\n0. `color {String / Array / Object}`: **Optional** Color of the padding. See\n   [colors specification](#colors-specification).\n0. `callback {Function(err, image)}`\n\n#### Saturate\n\nAdjust image saturation.\n\n`image.saturate(delta, callback)`\n\n0. `delta {Float}`: By how much to increase / decrease the saturation.\n0. `callback {Function(err, image)}`\n\n**Examples**:\n\n0. `image.saturate(0, ...)` will have no effect on the image.\n0. `image.saturate(0.5, ...)` will increase the saturation by 50%.\n0. `image.saturate(-1, ...)` will decrease the saturation by 100%, effectively\n   desaturating the image.\n\n#### Lighten\n\nAdjust image lightness.\n\n`image.lighten(delta, callback)`\n\n0. `delta {Float}`: By how much to increase / decrease the lightness.\n0. `callback {Function(err, image)}`\n\n**Examples**:\n\n0. `image.lighten(0, ...)` will have no effect on the image.\n0. `image.lighten(0.5, ...)` will increase the lightness by 50%.\n0. `image.lighten(-1, ...)` will decrease the lightness by 100%, effectively\n   making the image black.\n\n#### Darken\n\nAdjust image lightness.\n\n`image.darken(delta, callback)`\n\nEquivalent to `image.lighten(-delta, callback)`.\n\n#### Hue\n\nAdjust image hue.\n\n`image.hue(shift, callback)`\n\n0. `shift {Float}`: By how many degrees to shift each pixel\'s hue.\n0. `callback {Function(err, image)}`\n\n**Examples**:\n\n0. `image.lighten(0, ...)` will have no effect on the image.\n0. `image.lighten(100, ...)` will shift pixels\' hue by 100 degrees.\n\n**Note:** The hue is shifted in a circular manner in the range [0,360] for each\npixel individually.\n\n#### Fade\n\nAdjust image transperancy.\n\n`image.fade(delta, callback)`\n\n0. `delta {Float}`: By how much to increase / decrease the transperancy.\n0. `callback {Function(err, image)}`\n\n**Note:** The transparency is adjusted independently for each pixel.\n\n**Examples**:\n\n0. `image.fade(0, ...)` will have no effect on the image.\n0. `image.fade(0.5, ...)` will increase the transparency by 50%.\n0. `image.fade(1, ...)` will make the image completely transparent.\n\n#### Opacify\n\nMake image completely opaque.\n\n`image.opacify(callback)`\n\n0. `callback {Function(err, image)}`\n\n#### Paste\n\nPaste an image on top of this image.\n\n`image.paste(left, top, img, callback)`\n\n0. `left, top {Integer}`: Coordinates of the top-left corner of the pasted\n   image.\n0. `img {Image object}`: The image to paste.\n0. `callback {Function(err, image)}`\n\n**Notes:**\n\n0. If the pasted image exceeds the bounds of the base image, an exception\n   is thrown.\n0. `img` is pasted in the state it was at the time `image.paste( ... )` was\n   called, eventhough `callback` is called asynchronously.\n0. For transparent images, alpha blending is done according to the equations\n   described [here](http://en.wikipedia.org/wiki/Alpha_compositing#Alpha_blending).\n0. Extra caution is required when using this method in batch mode, as the images\n   may change by the time this operation is called.\n\n### Getters\n\n#### Width\n\n`image.width()` returns the image\'s width in pixels.\n\n#### Height\n\n`image.height()` returns the image\'s height in pixels.\n\n#### Clone\n\nClone the image into a new image object.\n\n`image.clone(callback)`\n\n0. `callback {Function(err, newImage)}`\n\n**Example**: See [`examples/clone.js`](examples/clone.js)\n\n**Note**: The image is cloned to the state it was at the time\n`image.clone( ... )` was called, eventhough `callback` is called asynchronously.\n\n```Javascript\nimage.width(); // 500\nimage.clone(function(err, clone){\n    clone.width(); // 500\n});\nimage.resize(100, 100, function(err, image){\n    image.width(); //100\n});\n```\n\n#### Extract\n\nCopy an area of the image into a new image object.\n\n`image.extract(left, top, right, bottom, callback)`\n\n0. `left, top, right, bottom {Integer}`: Coordinates of the area to copy.\n0. `callback {Function(err, newImage)}`\n\n**Example**: See [`examples/extract.js`](examples/extract.js)\n\n**Note**: The sub-image is extracted from the original image in the state it was\nat the time `image.extract( ... )` was called, eventhough `callback` is called\nasynchronously.\n\n#### Get as a Buffer\n\nGet encoded binary image data as a NodeJS\n[Buffer](http://nodejs.org/api/buffer.html).\n\nWhen opening an image, it is decoded and stored in memory as an uncompressed\nimage. All manipulations are done on the uncompressed data in memory. This\nmethod allows to encode the image to one of the specified formats and get the\nencoded data as a NodeJS Buffer object.\n\n`image.toBuffer(format, params, callback)`\n\n0. `format {String}`: Encoding format. Possible values:\n  - `"jpg"`\n  - `"png"`\n0. `params {Object}`: **Optional** Format-specific parameters (See below).\n0. `callback {Function(err, buffer)}`\n\n**Supported encoding formats:**\n\n##### JPEG\n\nThe `params` object should have the following fields:\n\n- `quality {Integer}`: Defaults to `100`.\n\nNote that when encoding to JPEG the alpha channel is discarded.\n\n##### PNG\n\nThe `params` object should have the following fields:\n\n- `compression {String}`: Defaults to `"fast"`. Possible values:\n  - `"none"` - No compression. Fastest.\n  - `"fast"` - Basic compression. Fast.\n  - `"high"` - High compression. Slowest.\n- `interlaced {Boolean}`: Defaults to `false`.\n- `transparency {true/false/\'auto\'}`: Preserve transparency? Defaults to\n  `\'auto\'`. Determines if the encoded image will have 3 or 4 channels. If\n  `\'auto\'`, the image will be encoded with 4 channels if it has transparent\n  components, and 3 channels otherwise.\n\n#### Write to file\n\nWrite encoded binary image data directly to a file.\n\n`image.writeFile(path, format, params, callback)`\n\n0. `path {String}`: Path of file to write.\n0. `format {String}`: **Optional** Encoding format. If omitted, will be inferred\n   from `path` extension. Possible values are specified in\n   [Get as a Buffer](#get-as-a-buffer) section.\n0. `params {Object}`: **Optional** Format-specific parameters.\n0. `callback {Function(err)}`\n\n### Batch operations\n\nEach of the [image operations](#image-operations) above can be done as part of\na batch of operations. Operations can be queued, and executed as a batch at any\ntime.\n\nEach one of the [image operations](#image-operations) has a batch equivalent\nwhich takes the same arguments, except the callback, which is not needed.\n\nWhen all batch operations had been queued, they can be executed in one of\nseveral methods, as explained below.\n\n#### Obtaining a batch object\n\nIn order to start queueing operations, a batch object first needs to be obtained\nfrom the image.\n\n```Javascript\n// obtain a batch object from the image:\nvar batch = image.batch();\n```\n\n#### Using a batch object\n\nUse the batch object to queue [image operations](#image-operations). Each of the\noperations above has a batch equivalent. Operations can be chained.\n\n**Remember, the batch manipulation methods do not take a callback.**\n\n**Example:**\n\n```Javascript\nbatch.rotate(45, \'white\').scale(0.5).blur(5);\n```\n\n#### Executing a batch\n\nThere are several methods which start the execution of a batch. Once a batch\nfinishes an execution, it becomes empty and can be resued to queue additional\noperations.\n\n##### Execute batch and obtain the manipulated image object\n\nWhen all desired operations had been queued, execute the batch with the `exec()`\nmethod. `exec` takes a `callback` argument; `callback` is a function which\nreceives an error object and the manipulated image object:\n\n`batch.exec(callback)`\n\n  - `callback {Function(err, image)}`:\n    - `err`: An error object or `null` when no error.\n    - `image`: An image object of the manipulated image.\n\n```Javascript\nbatch.exec(function(err, image){\n  // check err, use image\n});\n```\n\n##### Execute batch and obtain a Buffer object\n\nBatch objects have a `toBuffer` convenience method.\n\n`batch.toBuffer(format, params, callback)`\n\nSee parameters of [`image.toBuffer()`](#get-as-a-buffer).\n\n##### Execute batch and write to file\n\nBatch objects have a `writeFile` convenience method.\n\n`batch.writeFile(path, format, params, callback)`\n\nSee parameters of [`image.writeFile()`](#write-to-file).\n\n#### Notes on batch operations\n\nAn image can have more than one batch object, but all batch objects modify the\nsame underlying image. This means the order of execution matters.\n\n```Javascript\nvar batch1 = image.batch().rotate(\'45\', \'black\');\nvar batch2 = image.batch().border(15, \'black\');\n```\n\nThis will rotate the image 45degs and then add a black border:\n\n```Javascript\nbatch1.exec(function(err, image){\n    batch2.exec(function(err, image){\n        // ...\n    });\n});\n```\n\nWhile this will add a black border and then rotate the image 45degs:\n\n```Javascript\nbatch2.exec(function(err, image){\n    batch1.exec(function(err, image){\n        // ...\n    });\n});\n```\n\n## Copyrights\n\nThe native part of this module is compiled from source which uses the following:\n\n- Independent JPEG Group\'s free JPEG software:\n  - [Website](http://www.ijg.org/)\n  - [Readme](https://github.com/EyalAr/lwip/blob/master/src/lib/jpeg/README)\n- libpng:\n  - [Website](http://www.libpng.org/)\n  - [Readme](https://github.com/EyalAr/lwip/blob/master/src/lib/png/README)\n- zlib:\n  - [Website](http://www.zlib.net/)\n  - [Readme](https://github.com/EyalAr/lwip/blob/master/src/lib/zlib/README)\n- The CImg Library\n  - [Website](http://cimg.sourceforge.net/)\n  - [Readme](https://github.com/EyalAr/lwip/blob/master/src/lib/cimg/README.txt)\n',
+49 silly resolved     readmeFilename: 'README.md',
+49 silly resolved     _id: 'lwip@0.0.5',
+49 silly resolved     _from: 'lwip@' } ]
+50 info install lwip@0.0.5 into /Users/aymericmortemousque/Git/mockupBackend
+51 info installOne lwip@0.0.5
+52 verbose from cache /Users/aymericmortemousque/.npm/lwip/0.0.5/package/package.json
+53 info /Users/aymericmortemousque/Git/mockupBackend/node_modules/lwip unbuild
+54 verbose read json /Users/aymericmortemousque/Git/mockupBackend/node_modules/lwip/package.json
+55 verbose tar unpack /Users/aymericmortemousque/.npm/lwip/0.0.5/package.tgz
+56 silly lockFile d11ac37b--mockupBackend-node-modules-lwip /Users/aymericmortemousque/Git/mockupBackend/node_modules/lwip
+57 verbose lock /Users/aymericmortemousque/Git/mockupBackend/node_modules/lwip /Users/aymericmortemousque/.npm/d11ac37b--mockupBackend-node-modules-lwip.lock
+58 silly lockFile 50d2aaee-usque-npm-lwip-0-0-5-package-tgz /Users/aymericmortemousque/.npm/lwip/0.0.5/package.tgz
+59 verbose lock /Users/aymericmortemousque/.npm/lwip/0.0.5/package.tgz /Users/aymericmortemousque/.npm/50d2aaee-usque-npm-lwip-0-0-5-package-tgz.lock
+60 silly gunzTarPerm modes [ '755', '644' ]
+61 silly gunzTarPerm extractEntry package.json
+62 silly gunzTarPerm extractEntry .npmignore
+63 silly gunzTarPerm extractEntry README.md
+64 silly gunzTarPerm extractEntry LICENSE
+65 silly gunzTarPerm extractEntry index.js
+66 silly gunzTarPerm extractEntry binding.gyp
+67 silly gunzTarPerm extractEntry .travis.yml
+68 silly gunzTarPerm extractEntry tests/utils.js
+69 silly gunzTarPerm extractEntry tests/imgs.js
+70 silly gunzTarPerm extractEntry tests/02.operations/001.open.js
+71 silly gunzTarPerm extractEntry tests/02.operations/105.crop.js
+72 silly gunzTarPerm extractEntry tests/02.operations/106.blur.js
+73 silly gunzTarPerm extractEntry tests/02.operations/107.mirror.js
+74 silly gunzTarPerm extractEntry tests/02.operations/108.pad.js
+75 silly gunzTarPerm extractEntry tests/02.operations/104.rotate.js
+76 silly gunzTarPerm extractEntry tests/02.operations/110.sharpen.js
+77 silly gunzTarPerm extractEntry tests/02.operations/111.saturate.js
+78 silly gunzTarPerm extractEntry tests/02.operations/112.lighten.js
+79 silly gunzTarPerm extractEntry tests/02.operations/113.darken.js
+80 silly gunzTarPerm extractEntry tests/02.operations/114.hue.js
+81 silly gunzTarPerm extractEntry tests/02.operations/103.scale.js
+82 silly gunzTarPerm extractEntry tests/02.operations/115.hslaAdjust.js
+83 silly gunzTarPerm extractEntry tests/02.operations/102.resize.js
+84 silly gunzTarPerm extractEntry tests/02.operations/116.fade.js
+85 silly gunzTarPerm extractEntry tests/02.operations/101.writeFile.js
+86 silly gunzTarPerm extractEntry tests/02.operations/116.opacify.js
+87 silly gunzTarPerm extractEntry tests/02.operations/002.create.js
+88 silly gunzTarPerm extractEntry tests/02.operations/117.paste.js
+89 silly gunzTarPerm extractEntry tests/02.operations/109.border.js
+90 silly gunzTarPerm extractEntry tests/03.safety/00.locks.js
+91 silly gunzTarPerm extractEntry tests/03.safety/01.releases.js
+92 silly gunzTarPerm extractEntry tests/03.safety/02.clone.js
+93 silly gunzTarPerm extractEntry tests/03.safety/03.extract.js
+94 silly gunzTarPerm extractEntry tests/04.batch/index.js
+95 silly gunzTarPerm extractEntry tests/01.getters/index.js
+96 silly gunzTarPerm extractEntry tests/NOTES.md
+97 silly gunzTarPerm extractEntry tests/images/gs.jpg
+98 silly gunzTarPerm extractEntry tests/images/gs.png
+99 silly gunzTarPerm extractEntry tests/images/invalid.jpg
+100 silly gunzTarPerm extractEntry tests/images/invalid.png
+101 silly gunzTarPerm extractEntry tests/images/rgb.jpg
+102 silly gunzTarPerm extractEntry tests/images/rgb.png
+103 silly gunzTarPerm extractEntry tests/images/rgbjpg
+104 silly gunzTarPerm extractEntry tests/images/rgbpng
+105 silly gunzTarPerm extractEntry tests/images/trans.png
+106 silly gunzTarPerm extractEntry tests/00.argsValidation/001.open.js
+107 silly gunzTarPerm extractEntry tests/00.argsValidation/105.image.writeFile.js
+108 silly gunzTarPerm extractEntry tests/00.argsValidation/106.image.mirror.js
+109 silly gunzTarPerm extractEntry tests/00.argsValidation/107.image.pad.js
+110 silly gunzTarPerm extractEntry tests/00.argsValidation/108.image.border.js
+111 silly gunzTarPerm extractEntry tests/00.argsValidation/104.image.toBuffer.js
+112 silly gunzTarPerm extractEntry tests/00.argsValidation/201.batch.resize.js
+113 silly gunzTarPerm extractEntry tests/00.argsValidation/202.batch.scale.js
+114 silly gunzTarPerm extractEntry tests/00.argsValidation/203.batch.rotate.js
+115 silly gunzTarPerm extractEntry tests/00.argsValidation/204.batch.toBuffer.js
+116 silly gunzTarPerm extractEntry tests/00.argsValidation/205.batch.writeFile.js
+117 silly gunzTarPerm extractEntry tests/00.argsValidation/103.image.rotate.js
+118 silly gunzTarPerm extractEntry tests/00.argsValidation/206.batch.mirror.js
+119 silly gunzTarPerm extractEntry tests/00.argsValidation/102.image.scale.js
+120 silly gunzTarPerm extractEntry tests/00.argsValidation/207.batch.pad.js
+121 silly gunzTarPerm extractEntry tests/00.argsValidation/101.image.resize.js
+122 silly gunzTarPerm extractEntry tests/00.argsValidation/208.batch.border.js
+123 silly gunzTarPerm extractEntry tests/00.argsValidation/002.create.js
+124 silly gunzTarPerm extractEntry tests/00.argsValidation/209.batch.paste.js
+125 silly gunzTarPerm extractEntry tests/00.argsValidation/109.image.paste.js
+126 silly gunzTarPerm extractEntry tests/mocha.opts
+127 silly gunzTarPerm extractEntry tests/05.stress/index.js
+128 silly gunzTarPerm extractEntry lib/Batch.js
+129 silly gunzTarPerm extractEntry lib/Image.js
+130 silly gunzTarPerm extractEntry lib/defs.js
+131 silly gunzTarPerm extractEntry lib/obtain.js
+132 silly gunzTarPerm extractEntry lib/util.js
+133 silly gunzTarPerm extractEntry DEVELOPMENT.md
+134 silly gunzTarPerm extractEntry src/decoder/buffer_worker.cpp
+135 silly gunzTarPerm extractEntry src/decoder/decoder.h
+136 silly gunzTarPerm extractEntry src/decoder/init.cpp
+137 silly gunzTarPerm extractEntry src/decoder/jpeg_decoder.cpp
+138 silly gunzTarPerm extractEntry src/decoder/png_decoder.cpp
+139 silly gunzTarPerm extractEntry src/decoder/pnglibconf.h
+140 silly gunzTarPerm extractEntry src/decoder/util.cpp
+141 silly gunzTarPerm extractEntry src/encoder/encoder.h
+142 silly gunzTarPerm extractEntry src/encoder/init.cpp
+143 silly gunzTarPerm extractEntry src/encoder/jpeg_worker.cpp
+144 silly gunzTarPerm extractEntry src/encoder/png_worker.cpp
+145 silly gunzTarPerm extractEntry src/encoder/pnglibconf.h
+146 silly gunzTarPerm extractEntry src/image/mirror_worker.cpp
+147 silly gunzTarPerm extractEntry src/image/blur_worker.cpp
+148 silly gunzTarPerm extractEntry src/image/hsla_worker.cpp
+149 silly gunzTarPerm extractEntry src/image/image.cpp
+150 silly gunzTarPerm extractEntry src/image/image.h
+151 silly gunzTarPerm extractEntry src/image/init.cpp
+152 silly gunzTarPerm extractEntry src/image/crop_worker.cpp
+153 silly gunzTarPerm extractEntry src/image/opacify_worker.cpp
+154 silly gunzTarPerm extractEntry src/image/pad_worker.cpp
+155 silly gunzTarPerm extractEntry src/image/paste_worker.cpp
+156 silly gunzTarPerm extractEntry src/image/resize_worker.cpp
+157 silly gunzTarPerm extractEntry src/image/rotate_worker.cpp
+158 silly gunzTarPerm extractEntry src/image/sharpen_worker.cpp
+159 silly gunzTarPerm extractEntry src/lib/cimg/CImg.h
+160 silly gunzTarPerm extractEntry src/lib/cimg/Licence_CeCILL-C_V1-en.txt
+161 silly gunzTarPerm extractEntry src/lib/cimg/Licence_CeCILL_V2-en.txt
+162 silly gunzTarPerm extractEntry src/lib/cimg/README.txt
+163 silly gunzTarPerm extractEntry src/lib/jpeg/README
+164 silly gunzTarPerm extractEntry src/lib/jpeg/libjpeg.txt
+165 silly gunzTarPerm extractEntry src/lib/jpeg/jcapimin.c
+166 silly gunzTarPerm extractEntry src/lib/jpeg/jcapistd.c
+167 silly gunzTarPerm extractEntry src/lib/jpeg/jcarith.c
+168 silly gunzTarPerm extractEntry src/lib/jpeg/jccoefct.c
+169 silly gunzTarPerm extractEntry src/lib/jpeg/jccolor.c
+170 silly gunzTarPerm extractEntry src/lib/jpeg/jcdctmgr.c
+171 silly gunzTarPerm extractEntry src/lib/jpeg/jchuff.c
+172 silly gunzTarPerm extractEntry src/lib/jpeg/jcinit.c
+173 silly gunzTarPerm extractEntry src/lib/jpeg/jcmainct.c
+174 silly gunzTarPerm extractEntry src/lib/jpeg/jcmarker.c
+175 silly gunzTarPerm extractEntry src/lib/jpeg/jcmaster.c
+176 silly gunzTarPerm extractEntry src/lib/jpeg/jcomapi.c
+177 silly gunzTarPerm extractEntry src/lib/jpeg/jconfig.h
+178 silly gunzTarPerm extractEntry src/lib/jpeg/jcparam.c
+179 silly gunzTarPerm extractEntry src/lib/jpeg/jcprepct.c
+180 silly gunzTarPerm extractEntry src/lib/jpeg/jcsample.c
+181 silly gunzTarPerm extractEntry src/lib/jpeg/jdapimin.c
+182 silly gunzTarPerm extractEntry src/lib/jpeg/jdapistd.c
+183 silly gunzTarPerm extractEntry src/lib/jpeg/jdarith.c
+184 silly gunzTarPerm extractEntry src/lib/jpeg/jdatadst.c
+185 silly gunzTarPerm extractEntry src/lib/jpeg/jdatasrc.c
+186 silly gunzTarPerm extractEntry src/lib/jpeg/jdcoefct.c
+187 silly gunzTarPerm extractEntry src/lib/jpeg/jdcolor.c
+188 silly gunzTarPerm extractEntry src/lib/jpeg/jdct.h
+189 silly gunzTarPerm extractEntry src/lib/jpeg/jddctmgr.c
+190 silly gunzTarPerm extractEntry src/lib/jpeg/jaricom.c
+191 silly gunzTarPerm extractEntry src/lib/jpeg/jdinput.c
+192 silly gunzTarPerm extractEntry src/lib/jpeg/jdmainct.c
+193 silly gunzTarPerm extractEntry src/lib/jpeg/jdmarker.c
+194 silly gunzTarPerm extractEntry src/lib/jpeg/jdmaster.c
+195 silly gunzTarPerm extractEntry src/lib/jpeg/jdmerge.c
+196 silly gunzTarPerm extractEntry src/lib/jpeg/jdpostct.c
+197 silly gunzTarPerm extractEntry src/lib/jpeg/jdsample.c
+198 silly gunzTarPerm extractEntry src/lib/jpeg/jerror.c
+199 silly gunzTarPerm extractEntry src/lib/jpeg/jerror.h
+200 silly gunzTarPerm extractEntry src/lib/jpeg/jfdctflt.c
+201 silly gunzTarPerm extractEntry src/lib/jpeg/jfdctfst.c
+202 silly gunzTarPerm extractEntry src/lib/jpeg/jfdctint.c
+203 silly gunzTarPerm extractEntry src/lib/jpeg/jidctflt.c
+204 silly gunzTarPerm extractEntry src/lib/jpeg/jidctfst.c
+205 silly gunzTarPerm extractEntry src/lib/jpeg/jidctint.c
+206 silly gunzTarPerm extractEntry src/lib/jpeg/jinclude.h
+207 silly gunzTarPerm extractEntry src/lib/jpeg/jmemmgr.c
+208 silly gunzTarPerm extractEntry src/lib/jpeg/jmemnobs.c
+209 silly gunzTarPerm extractEntry src/lib/jpeg/jmemsys.h
+210 silly gunzTarPerm extractEntry src/lib/jpeg/jmorecfg.h
+211 silly gunzTarPerm extractEntry src/lib/jpeg/jpegint.h
+212 silly gunzTarPerm extractEntry src/lib/jpeg/jpeglib.h
+213 silly gunzTarPerm extractEntry src/lib/jpeg/jquant1.c
+214 silly gunzTarPerm extractEntry src/lib/jpeg/jquant2.c
+215 silly gunzTarPerm extractEntry src/lib/jpeg/jutils.c
+216 silly gunzTarPerm extractEntry src/lib/jpeg/jversion.h
+217 silly gunzTarPerm extractEntry src/lib/jpeg/jdhuff.c
+218 silly gunzTarPerm extractEntry src/lib/png/README
+219 silly gunzTarPerm extractEntry src/lib/png/LICENSE
+220 silly gunzTarPerm extractEntry src/lib/png/png.c
+221 silly gunzTarPerm extractEntry src/lib/png/png.h
+222 silly gunzTarPerm extractEntry src/lib/png/pngconf.h
+223 silly gunzTarPerm extractEntry src/lib/png/pngdebug.h
+224 silly gunzTarPerm extractEntry src/lib/png/pngerror.c
+225 silly gunzTarPerm extractEntry src/lib/png/pngget.c
+226 silly gunzTarPerm extractEntry src/lib/png/pnginfo.h
+227 silly gunzTarPerm extractEntry src/lib/png/pngmem.c
+228 silly gunzTarPerm extractEntry src/lib/png/pngpread.c
+229 silly gunzTarPerm extractEntry src/lib/png/pngwutil.c
+230 silly gunzTarPerm extractEntry src/lib/png/pngread.c
+231 silly gunzTarPerm extractEntry src/lib/png/pngrio.c
+232 silly gunzTarPerm extractEntry src/lib/png/pngrtran.c
+233 silly gunzTarPerm extractEntry src/lib/png/pngrutil.c
+234 silly gunzTarPerm extractEntry src/lib/png/pngset.c
+235 silly gunzTarPerm extractEntry src/lib/png/pngstruct.h
+236 silly gunzTarPerm extractEntry src/lib/png/pngtrans.c
+237 silly gunzTarPerm extractEntry src/lib/png/pngwio.c
+238 silly gunzTarPerm extractEntry src/lib/png/pngwrite.c
+239 silly gunzTarPerm extractEntry src/lib/png/pngwtran.c
+240 silly gunzTarPerm extractEntry src/lib/png/pngpriv.h
+241 silly gunzTarPerm extractEntry src/lib/zlib/README
+242 silly gunzTarPerm extractEntry src/lib/zlib/zutil.h
+243 silly gunzTarPerm extractEntry src/lib/zlib/compress.c
+244 silly gunzTarPerm extractEntry src/lib/zlib/crc32.c
+245 silly gunzTarPerm extractEntry src/lib/zlib/crc32.h
+246 silly gunzTarPerm extractEntry src/lib/zlib/deflate.c
+247 silly gunzTarPerm extractEntry src/lib/zlib/deflate.h
+248 silly gunzTarPerm extractEntry src/lib/zlib/gzclose.c
+249 silly gunzTarPerm extractEntry src/lib/zlib/gzguts.h
+250 silly gunzTarPerm extractEntry src/lib/zlib/gzlib.c
+251 silly gunzTarPerm extractEntry src/lib/zlib/gzread.c
+252 silly gunzTarPerm extractEntry src/lib/zlib/gzwrite.c
+253 silly gunzTarPerm extractEntry src/lib/zlib/infback.c
+254 silly gunzTarPerm extractEntry src/lib/zlib/adler32.c
+255 silly gunzTarPerm extractEntry src/lib/zlib/inffast.h
+256 silly gunzTarPerm extractEntry src/lib/zlib/inffixed.h
+257 silly gunzTarPerm extractEntry src/lib/zlib/inflate.c
+258 silly gunzTarPerm extractEntry src/lib/zlib/inflate.h
+259 silly gunzTarPerm extractEntry src/lib/zlib/inftrees.c
+260 silly gunzTarPerm extractEntry src/lib/zlib/inftrees.h
+261 silly gunzTarPerm extractEntry src/lib/zlib/trees.c
+262 silly gunzTarPerm extractEntry src/lib/zlib/trees.h
+263 silly gunzTarPerm extractEntry src/lib/zlib/uncompr.c
+264 silly gunzTarPerm extractEntry src/lib/zlib/zconf.h
+265 silly gunzTarPerm extractEntry src/lib/zlib/zlib.h
+266 silly gunzTarPerm extractEntry src/lib/zlib/zutil.c
+267 silly gunzTarPerm extractEntry src/lib/zlib/inffast.c
+268 silly gunzTarPerm extractEntry examples/blur.js
+269 silly gunzTarPerm extractEntry examples/extract.js
+270 silly gunzTarPerm extractEntry examples/fade.js
+271 silly gunzTarPerm extractEntry examples/hue.js
+272 silly gunzTarPerm extractEntry examples/saturate.js
+273 silly gunzTarPerm extractEntry examples/crop.js
+274 silly gunzTarPerm extractEntry examples/border.js
+275 silly gunzTarPerm extractEntry examples/mirror.js
+276 silly gunzTarPerm extractEntry examples/pad.js
+277 silly gunzTarPerm extractEntry examples/paste_blend.js
+278 silly gunzTarPerm extractEntry examples/paste_mosiac.js
+279 silly gunzTarPerm extractEntry examples/convert_png_jpg.js
+280 silly gunzTarPerm extractEntry examples/png_interlaced.js
+281 silly gunzTarPerm extractEntry examples/convert_jpg_png.js
+282 silly gunzTarPerm extractEntry examples/reduce_quality.js
+283 silly gunzTarPerm extractEntry examples/clone.js
+284 silly gunzTarPerm extractEntry examples/rotate.js
+285 silly gunzTarPerm extractEntry examples/rotate_scale_blur.js
+286 silly gunzTarPerm extractEntry examples/sharpen.js
+287 silly gunzTarPerm extractEntry examples/lighten.js
+288 silly gunzTarPerm extractEntry examples/lena.png
+289 silly gunzTarPerm extractEntry examples/lena.jpg
+290 verbose read json /Users/aymericmortemousque/Git/mockupBackend/node_modules/lwip/package.json
+291 silly lockFile d11ac37b--mockupBackend-node-modules-lwip /Users/aymericmortemousque/Git/mockupBackend/node_modules/lwip
+292 silly lockFile d11ac37b--mockupBackend-node-modules-lwip /Users/aymericmortemousque/Git/mockupBackend/node_modules/lwip
+293 silly lockFile 50d2aaee-usque-npm-lwip-0-0-5-package-tgz /Users/aymericmortemousque/.npm/lwip/0.0.5/package.tgz
+294 silly lockFile 50d2aaee-usque-npm-lwip-0-0-5-package-tgz /Users/aymericmortemousque/.npm/lwip/0.0.5/package.tgz
+295 info preinstall lwip@0.0.5
+296 verbose from cache /Users/aymericmortemousque/Git/mockupBackend/node_modules/lwip/package.json
+297 verbose readDependencies using package.json deps
+298 verbose from cache /Users/aymericmortemousque/Git/mockupBackend/node_modules/lwip/package.json
+299 verbose readDependencies using package.json deps
+300 verbose cache add [ 'nan@^1.3.0', null ]
+301 verbose cache add name=undefined spec="nan@^1.3.0" args=["nan@^1.3.0",null]
+302 verbose parsed url { protocol: null,
+302 verbose parsed url   slashes: null,
+302 verbose parsed url   auth: null,
+302 verbose parsed url   host: null,
+302 verbose parsed url   port: null,
+302 verbose parsed url   hostname: null,
+302 verbose parsed url   hash: null,
+302 verbose parsed url   search: null,
+302 verbose parsed url   query: null,
+302 verbose parsed url   pathname: 'nan@^1.3.0',
+302 verbose parsed url   path: 'nan@^1.3.0',
+302 verbose parsed url   href: 'nan@^1.3.0' }
+303 verbose cache add name="nan" spec="^1.3.0" args=["nan","^1.3.0"]
+304 verbose parsed url { protocol: null,
+304 verbose parsed url   slashes: null,
+304 verbose parsed url   auth: null,
+304 verbose parsed url   host: null,
+304 verbose parsed url   port: null,
+304 verbose parsed url   hostname: null,
+304 verbose parsed url   hash: null,
+304 verbose parsed url   search: null,
+304 verbose parsed url   query: null,
+304 verbose parsed url   pathname: '^1.3.0',
+304 verbose parsed url   path: '^1.3.0',
+304 verbose parsed url   href: '^1.3.0' }
+305 verbose addNamed [ 'nan', '^1.3.0' ]
+306 verbose addNamed [ null, null ]
+307 silly lockFile 2ff446b3-nan-1-3-0 nan@^1.3.0
+308 verbose lock nan@^1.3.0 /Users/aymericmortemousque/.npm/2ff446b3-nan-1-3-0.lock
+309 verbose cache add [ 'async@^0.9.0', null ]
+310 verbose cache add name=undefined spec="async@^0.9.0" args=["async@^0.9.0",null]
+311 verbose parsed url { protocol: null,
+311 verbose parsed url   slashes: null,
+311 verbose parsed url   auth: null,
+311 verbose parsed url   host: null,
+311 verbose parsed url   port: null,
+311 verbose parsed url   hostname: null,
+311 verbose parsed url   hash: null,
+311 verbose parsed url   search: null,
+311 verbose parsed url   query: null,
+311 verbose parsed url   pathname: 'async@^0.9.0',
+311 verbose parsed url   path: 'async@^0.9.0',
+311 verbose parsed url   href: 'async@^0.9.0' }
+312 verbose cache add name="async" spec="^0.9.0" args=["async","^0.9.0"]
+313 verbose parsed url { protocol: null,
+313 verbose parsed url   slashes: null,
+313 verbose parsed url   auth: null,
+313 verbose parsed url   host: null,
+313 verbose parsed url   port: null,
+313 verbose parsed url   hostname: null,
+313 verbose parsed url   hash: null,
+313 verbose parsed url   search: null,
+313 verbose parsed url   query: null,
+313 verbose parsed url   pathname: '^0.9.0',
+313 verbose parsed url   path: '^0.9.0',
+313 verbose parsed url   href: '^0.9.0' }
+314 verbose addNamed [ 'async', '^0.9.0' ]
+315 verbose addNamed [ null, null ]
+316 silly lockFile 7f39d2c2-async-0-9-0 async@^0.9.0
+317 verbose lock async@^0.9.0 /Users/aymericmortemousque/.npm/7f39d2c2-async-0-9-0.lock
+318 verbose cache add [ 'decree@0.0.2', null ]
+319 verbose cache add name=undefined spec="decree@0.0.2" args=["decree@0.0.2",null]
+320 verbose parsed url { protocol: null,
+320 verbose parsed url   slashes: null,
+320 verbose parsed url   auth: null,
+320 verbose parsed url   host: null,
+320 verbose parsed url   port: null,
+320 verbose parsed url   hostname: null,
+320 verbose parsed url   hash: null,
+320 verbose parsed url   search: null,
+320 verbose parsed url   query: null,
+320 verbose parsed url   pathname: 'decree@0.0.2',
+320 verbose parsed url   path: 'decree@0.0.2',
+320 verbose parsed url   href: 'decree@0.0.2' }
+321 verbose cache add name="decree" spec="0.0.2" args=["decree","0.0.2"]
+322 verbose parsed url { protocol: null,
+322 verbose parsed url   slashes: null,
+322 verbose parsed url   auth: null,
+322 verbose parsed url   host: null,
+322 verbose parsed url   port: null,
+322 verbose parsed url   hostname: null,
+322 verbose parsed url   hash: null,
+322 verbose parsed url   search: null,
+322 verbose parsed url   query: null,
+322 verbose parsed url   pathname: '0.0.2',
+322 verbose parsed url   path: '0.0.2',
+322 verbose parsed url   href: '0.0.2' }
+323 verbose addNamed [ 'decree', '0.0.2' ]
+324 verbose addNamed [ '0.0.2', '0.0.2' ]
+325 silly lockFile 2cb5663a-decree-0-0-2 decree@0.0.2
+326 verbose lock decree@0.0.2 /Users/aymericmortemousque/.npm/2cb5663a-decree-0-0-2.lock
+327 info addNameTag [ 'nan', '^1.3.0' ]
+328 info addNameTag [ 'async', '^0.9.0' ]
+329 verbose url raw nan
+330 verbose url resolving [ 'https://registry.npmjs.org/', './nan' ]
+331 verbose url resolved https://registry.npmjs.org/nan
+332 info trying registry request attempt 1 at 19:18:40
+333 verbose etag "4QHBB3KM0BSFWQGU7N2BM6J49"
+334 http GET https://registry.npmjs.org/nan
+335 verbose url raw async
+336 verbose url resolving [ 'https://registry.npmjs.org/', './async' ]
+337 verbose url resolved https://registry.npmjs.org/async
+338 info trying registry request attempt 1 at 19:18:40
+339 verbose etag "9PXHNTOZI5KPSU5OHYG7R6GGG"
+340 http GET https://registry.npmjs.org/async
+341 verbose url raw decree/0.0.2
+342 verbose url resolving [ 'https://registry.npmjs.org/', './decree/0.0.2' ]
+343 verbose url resolved https://registry.npmjs.org/decree/0.0.2
+344 info trying registry request attempt 1 at 19:18:40
+345 verbose etag "2UBGCP1OEF3YX7I7Q6MFGP1XX"
+346 http GET https://registry.npmjs.org/decree/0.0.2
+347 http 304 https://registry.npmjs.org/async
+348 silly registry.get cb [ 304,
+348 silly registry.get   { date: 'Wed, 22 Oct 2014 17:18:40 GMT',
+348 silly registry.get     server: 'Apache',
+348 silly registry.get     via: '1.1 varnish',
+348 silly registry.get     'last-modified': 'Wed, 22 Oct 2014 17:18:06 GMT',
+348 silly registry.get     'cache-control': 'max-age=60',
+348 silly registry.get     etag: '"9PXHNTOZI5KPSU5OHYG7R6GGG"',
+348 silly registry.get     age: '36',
+348 silly registry.get     'x-served-by': 'cache-lhr6328-LHR',
+348 silly registry.get     'x-cache': 'HIT',
+348 silly registry.get     'x-cache-hits': '2',
+348 silly registry.get     'x-timer': 'S1413998320.928271,VS0,VE0',
+348 silly registry.get     vary: 'Accept',
+348 silly registry.get     'content-length': '0',
+348 silly registry.get     'keep-alive': 'timeout=10, max=50',
+348 silly registry.get     connection: 'Keep-Alive' } ]
+349 verbose etag async from cache
+350 http 304 https://registry.npmjs.org/decree/0.0.2
+351 silly registry.get cb [ 304,
+351 silly registry.get   { date: 'Wed, 22 Oct 2014 17:18:40 GMT',
+351 silly registry.get     server: 'Apache',
+351 silly registry.get     via: '1.1 varnish',
+351 silly registry.get     'last-modified': 'Wed, 22 Oct 2014 17:18:40 GMT',
+351 silly registry.get     'cache-control': 'max-age=60',
+351 silly registry.get     etag: '"2UBGCP1OEF3YX7I7Q6MFGP1XX"',
+351 silly registry.get     age: '30',
+351 silly registry.get     'x-served-by': 'cache-lhr6326-LHR',
+351 silly registry.get     'x-cache': 'HIT',
+351 silly registry.get     'x-cache-hits': '1',
+351 silly registry.get     'x-timer': 'S1413998320.946911,VS0,VE0',
+351 silly registry.get     vary: 'Accept',
+351 silly registry.get     'content-length': '0',
+351 silly registry.get     'keep-alive': 'timeout=10, max=50',
+351 silly registry.get     connection: 'Keep-Alive' } ]
+352 verbose etag decree/0.0.2 from cache
+353 verbose read json /Users/aymericmortemousque/.npm/decree/0.0.2/package/package.json
+354 silly lockFile 2cb5663a-decree-0-0-2 decree@0.0.2
+355 silly lockFile 2cb5663a-decree-0-0-2 decree@0.0.2
+356 silly lockFile 7f39d2c2-async-0-9-0 async@^0.9.0
+357 silly lockFile 7f39d2c2-async-0-9-0 async@^0.9.0
+358 verbose about to build /Users/aymericmortemousque/Git/mockupBackend/node_modules/lwip
+359 info /Users/aymericmortemousque/Git/mockupBackend/node_modules/lwip unbuild
+360 verbose from cache /Users/aymericmortemousque/Git/mockupBackend/node_modules/lwip/package.json
+361 info preuninstall lwip@0.0.5
+362 info uninstall lwip@0.0.5
+363 verbose true,/Users/aymericmortemousque/Git/mockupBackend/node_modules,/Users/aymericmortemousque/Git/mockupBackend/node_modules unbuild lwip@0.0.5
+364 info postuninstall lwip@0.0.5
+365 error Error: No compatible version found: async@'^0.9.0'
+365 error Valid install targets:
+365 error ["0.1.0","0.1.1","0.1.2","0.1.3","0.1.4","0.1.5","0.1.6","0.1.7","0.1.8","0.1.9","0.1.10","0.1.11","0.1.12","0.1.13","0.1.14","0.1.15","0.1.16","0.1.17","0.1.18","0.1.19","0.1.20","0.1.21","0.1.22","0.2.0","0.2.1","0.2.2","0.2.3","0.2.4","0.2.5","0.2.6","0.2.7","0.2.8","0.2.9","0.2.10","0.3.0","0.4.0","0.4.1","0.5.0","0.6.0","0.6.1","0.6.2","0.7.0","0.8.0","0.9.0"]
+365 error     at installTargetsError (/usr/local/lib/node_modules/npm/lib/cache.js:685:10)
+365 error     at /usr/local/lib/node_modules/npm/lib/cache.js:607:10
+365 error     at saved (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:138:7)
+365 error     at Object.oncomplete (fs.js:107:15)
+366 error If you need help, you may report this log at:
+366 error     <http://github.com/isaacs/npm/issues>
+366 error or email it to:
+366 error     <npm-@googlegroups.com>
+367 error System Darwin 14.0.0
+368 error command "node" "/usr/local/bin/npm" "install" "lwip"
+369 error cwd /Users/aymericmortemousque/Git/mockupBackend
+370 error node -v v0.10.5
+371 error npm -v 1.2.18
+372 verbose exit [ 1, true ]

@@ -30,27 +30,52 @@ exports.findById = function(req, res) {
 };
 
 exports.addFiles = function(req, res) {
-    var file = req.files.files[0];
-    console.log("image",file );
-    fs.readFile(file.path, function (err, data) {
-        var imageName = file.name;
-        /// If there's an error
-        if(!imageName){
-            console.log("There was an error")
-            res.redirect("/");
-            res.end();
+  console.log(req.files);
+    console.log(req.file);
+
+    var file = req.files.file;
+
+    var newPath = __dirname + "/../contents/images/" + file.name;
+    gm(file.path)
+     .resize(200)
+     .write(newPath, function (err) {
+        if (err) {
+          console.log(err);
+           console.log("There was an error")
         } else {
-            console.log("read");
-          var newPath = __dirname + "/../contents/images/" + imageName;
-          console.log("data", newPath);
-
-          /// write file to uploads/fullsize folder
-          fs.writeFile(newPath, data, function (err) {
-
-            /// let's see it
-           // res.redirect("/uploads/fullsize/" + imageName);
-            res.send("{ name:"+imageName+ "}");
-          });
+            res.send('{ "name":"' + file.name + '", "size": {"width": 200, "height":200 } }');
         }
-    });
+      });
+       //.size(function(err, value){
+       // console.log("value", value);
+
+     // });
+
+    //console.log("image",file );
+    // fs.readFile(file.path, function (err, data) {
+    //     var imageName = file.name;
+    //     /// If there's an error
+    //     if(!imageName){
+    //         console.log("There was an error")
+    //         res.redirect("/");
+    //         res.end();
+    //     } else {
+    //         console.log("read");
+    //       var newPath = __dirname + "/../contents/images/" + imageName;
+    //       console.log("data", newPath);
+
+    //       /// write file to uploads/fullsize folder
+    //       fs.writeFile(newPath, data, function (err) {
+
+    //         /// let's see it
+    //        // res.redirect("/uploads/fullsize/" + imageName);
+
+    //        console.log("cool");
+
+
+
+
+    //       });
+    //     }
+    // });
 };
